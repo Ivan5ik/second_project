@@ -1,7 +1,24 @@
+@import "antd/dist/antd.css";
+
 .App {
   text-align: center;
 }
-
+.ant-input:focus,
+.ant-input:hover {
+  border-color: #ac33c0;
+}
+.ant-input-number:hover,
+.ant-input:focus {
+  border-color: #ac33c0;
+}
+.ant-picker:hover,
+.ant-picker:focus {
+  border-color: #ac33c0;
+}
+.ant-btn-primary {
+  border-color: #ac33c0;
+  background: #ac33c0;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
