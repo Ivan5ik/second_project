@@ -1,9 +1,10 @@
 import { createUseStyles } from "react-jss";
+
 import { globalColors } from "../../utils";
 
 const inSidePallet = {
   boxSizing: "border-box",
-  colorForBorder: "#31353a",
+  colorForBorder: globalColors.darkGrey,
   width: "960px",
   fontSize: "18px",
 };
@@ -11,20 +12,20 @@ const useStyles = createUseStyles({
   root: {
     width: "100%",
     height: "450px",
-    background: "#d4c0c0",
+    background: globalColors.milk,
     padding: "50px 0px 35px 0px",
     display: "flex",
     justifyContent: "center",
   },
   container: {
     width: "980px",
-    height: "453px",
+    height: "400px",
     margin: "0px 105px 0px 105px",
     padding: "0px 10px 0px 10px",
     boxSizing: inSidePallet.boxSizing,
   },
   top: {
-    borderTop: "2px solid #31353a ",
+    borderTop: `2px solid ${globalColors.darkGrey}`,
     width: inSidePallet.width,
     boxSizing: "border-box",
     height: "56px",
@@ -36,14 +37,14 @@ const useStyles = createUseStyles({
     width: inSidePallet.width,
     boxSizing: "border-box",
     height: "183px",
-    borderTop: "2px solid #31353a ",
+    borderTop: `2px solid ${globalColors.darkGrey}`,
     padding: "20px 0px 20px 0px",
     display: "flex",
   },
   bottom: {
     width: inSidePallet.width,
     boxSizing: "border-box",
-    height: "217px",
+    height: "160px",
     borderTop: `2px solid ${globalColors.black}`,
     paddingTop: "30px",
   },
@@ -51,14 +52,18 @@ const useStyles = createUseStyles({
     display: "flex",
     justifyContent: "space-between",
     width: "768px",
+    "& .show": {
+      display: "none",
+    },
   },
+
   link: {
     display: "block",
     color: globalColors.white,
     fontSize: inSidePallet.fontSize,
     "&:hover": {
       cursor: "pointer",
-      color: globalColors.blue,
+      color: globalColors.sea,
       transition: "all 0.3s",
     },
     textDecoration: "none",
@@ -69,7 +74,7 @@ const useStyles = createUseStyles({
     fontSize: inSidePallet.fontSize,
     "&:hover": {
       cursor: "pointer",
-      color: globalColors.white,
+      color: globalColors.yellow,
       transition: "all 0.3s",
     },
     marginTop: "0px",

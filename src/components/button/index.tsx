@@ -1,19 +1,16 @@
-import React, { FC } from "react";
+import React from "react";
 import { Form, Button } from "antd";
+import { useTranslation } from "react-i18next";
 
-interface IButton {
-  onClick?: any;
-}
-
-const But: FC<IButton> = (props) => {
-  const { onClick } = props;
+const ButtonAnt = () => {
+  const { t } = useTranslation();
 
   return (
     <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
-      <Button type="primary" htmlType="submit" /*onClick={onClick}*/>
-        Submit
+      <Button type="primary" htmlType="submit">
+        {t("butSubmit")}
       </Button>
     </Form.Item>
   );
 };
-export { But };
+export { ButtonAnt };

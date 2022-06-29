@@ -1,7 +1,10 @@
 import React from "react";
-import { headerNavigation } from "../../utils";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
+import classNames from "classnames";
+
+import { StoreContext } from "../../store";
+import { headerNavigation } from "../../utils";
 
 import useStyles from "./style";
 
@@ -11,20 +14,64 @@ const Footer = () => {
   const history = useNavigate();
   const { t } = useTranslation();
 
+  const context = React.useContext(StoreContext);
+  const handleExit = () => {
+    context.setCheck(false);
+  };
+
   return (
     <div className={classes.root}>
       <div className={classes.container}>
         <div className={classes.top}>
           <div className={classes.menu}>
-            {headerNavigation.map((item: any) => (
-              <div
-                key={item.name}
-                className={classes.link}
-                onClick={() => history(item.path)}
-              >
-                {t(item.name)}
-              </div>
-            ))}
+            {headerNavigation.map((item: any) => {
+              if (item.name === "login/registr") {
+                if (context.check === true) {
+                  return (
+                    <p
+                      key={item.name}
+                      className={classes.link}
+                      onClick={handleExit}
+                    >
+                      {t("header.exit")}
+                    </p>
+                  );
+                } else {
+                  return (
+                    <p
+                      key={item.name}
+                      className={classes.link}
+                      onClick={() => history(item.path)}
+                    >
+                      {t("header.signUp")}
+                    </p>
+                  );
+                }
+              }
+              if (item.name === "header.list") {
+                return (
+                  <p
+                    key={item.name}
+                    className={
+                      classNames({ show: !context.check }) || classes.link
+                    }
+                    onClick={() => history(item.path)}
+                  >
+                    {t("header.list")}
+                  </p>
+                );
+              } else {
+                return (
+                  <div
+                    key={item.name}
+                    className={classes.link}
+                    onClick={() => history(item.path)}
+                  >
+                    {t(item.name)}
+                  </div>
+                );
+              }
+            })}
           </div>
           <div>
             <p

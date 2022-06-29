@@ -4,7 +4,7 @@ import { globalColors } from "../../utils";
 
 const useStyles = createUseStyles({
   root: {
-    background: "#d3d3c0",
+    background: globalColors.creamCake,
     "& .ant-carousel .slick-dots-bottom": {
       bottom: "-50px",
     },
@@ -12,7 +12,7 @@ const useStyles = createUseStyles({
       background: globalColors.blue,
     },
     "& .ant-carousel .slick-dots li button": {
-      background: "#32ffa6",
+      background: globalColors.lightGreen,
       height: "5px",
     },
   },

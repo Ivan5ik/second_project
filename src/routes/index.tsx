@@ -1,6 +1,10 @@
 import React from "react";
 import { Routes, Route as RouteDOM } from "react-router-dom";
-import { routes } from "./routes";
+
+import { ListUser } from "../pages/List_User";
+import { Home } from "../pages/Home_Page";
+import { Forma } from "../pages/Auth";
+import { PrivateRoute } from "../pages/Private_Route";
 
 import useStyles from "./style";
 
@@ -8,11 +12,18 @@ const Route = () => {
   const classes = useStyles();
 
   return (
-    <div>
+    <div className={classes.root}>
       <Routes>
-        {routes.map((item) => (
-          <RouteDOM path={item.path} element={item.component} />
-        ))}
+        <RouteDOM path="/" element={<Home />} />
+        <RouteDOM path="/login" element={<Forma />} />
+        <RouteDOM
+          path="/listUser"
+          element={
+            <PrivateRoute>
+              <ListUser />
+            </PrivateRoute>
+          }
+        />
       </Routes>
     </div>
   );
