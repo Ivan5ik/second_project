@@ -61,6 +61,9 @@ const useStyles = createUseStyles({
       width: "100%",
     },
   },
+  ro: {
+    color: "white",
+  },
 });
 
 export default useStyles;

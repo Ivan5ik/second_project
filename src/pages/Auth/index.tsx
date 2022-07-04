@@ -2,7 +2,7 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import { Tabs } from "antd";
 
-import { Login } from "../../components/log_in";
+import { Login } from "../../components/Log_in";
 import { Registr } from "../../components/registr";
 
 import useStyles from "./style";
@@ -36,6 +36,9 @@ const Forma = () => {
           </TabPane>
         </Tabs>
       </div>
+      <input type="checkbox" />
+      <input type="text" className={classes.ro} />
+      <input type="text" className={classes.ro} />
     </div>
   );
 };
