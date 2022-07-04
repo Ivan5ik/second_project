@@ -1,14 +1,14 @@
 import React from "react";
 import { Form } from "antd";
 
-import { InputName } from "../InputName";
-import { InputSurname } from "../InputSername";
-import { InputEmail } from "../InputEmail";
-import { InputAge } from "../InputAge";
-import { InputDate } from "../InputDate";
-import { InputPassword } from "../InputPassword";
-import { InputConfirmPass } from "../InputConfirmPass";
-import { ButtonAnt } from "../Button";
+import { InputName } from "../inputName";
+import { InputSurname } from "../inputSername";
+import { InputEmail } from "../inputEmail";
+import { InputAge } from "../inputAge";
+import { InputDate } from "../inputDate";
+import { InputPassword } from "../inputPassword";
+import { InputConfirmPass } from "../inputConfirmPass";
+import { ButtonAnt } from "../button";
 
 const Registr = () => {
   const listUser: any[] = [];

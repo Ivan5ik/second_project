@@ -2,9 +2,9 @@ import React from "react";
 import { Form } from "antd";
 import { useNavigate } from "react-router-dom";
 
-import { InputEmail } from "../InputEmail";
-import { InputPassword } from "../InputPassword";
-import { ButtonAnt } from "../Button";
+import { InputEmail } from "../inputEmail";
+import { InputPassword } from "../inputPassword";
+import { ButtonAnt } from "../button";
 import { StoreContext } from "../../store";
 
 import useStyles from "./style";
